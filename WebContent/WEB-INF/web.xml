@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>JavaWeb-Shopping</display-name>
+  <servlet>
+    <description></description>
+    <display-name>bookServlet</display-name>
+    <servlet-name>bookServlet</servlet-name>
+    <servlet-class>com.liusir.bookstore.servlet.bookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>bookServlet</servlet-name>
+    <url-pattern>/bookServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>encording</display-name>
+    <filter-name>encording</filter-name>
+    <filter-class>com.liusir.bookstore.filter.encording</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>encording</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <display-name>ThreadLoaclFilter</display-name>
+    <filter-name>ThreadLoaclFilter</filter-name>
+    <filter-class>com.liusir.bookstore.filter.ThreadLoaclFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>ThreadLoaclFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>
